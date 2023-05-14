@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" script_class="CudotMaterial" load_steps=5 format=3 uid="uid://b356ekg5rks4d"]
+
+[ext_resource type="Script" path="res://cudot/cudot_material.gd" id="1_xxmm5"]
+[ext_resource type="Shader" path="res://cudot/shader/cudot.gdshader" id="2_yo2v6"]
+[ext_resource type="Texture2D" uid="uid://bns0uw7ysbw3t" path="res://cudot/noise/cudot_fake_specular_texture.tres" id="3_6kmr3"]
+[ext_resource type="Texture2D" uid="uid://b871sqiyoicfl" path="res://cudot/noise/cudot_random_color_noise.tres" id="4_vfobd"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("2_yo2v6")
+shader_parameter/aabb_size = Vector3(0.200926, 0.2, 0.200926)
+shader_parameter/base_color = Color(0.815686, 0.847059, 0.815686, 1)
+shader_parameter/random_color = Color(0.321569, 0.286275, 0.129412, 1)
+shader_parameter/random_color_strength = 1.0
+shader_parameter/gradient_color = Color(0, 0, 0, 1)
+shader_parameter/gradient_bottom_color = Color(0, 0, 0, 1)
+shader_parameter/gradient_bottom_strength = 0.6
+shader_parameter/fake_specular_color = Color(1, 1, 1, 1)
+shader_parameter/fake_specular_strength = 0.0
+shader_parameter/fresnel_color = Color(1, 1, 1, 1)
+shader_parameter/fresnel_power = 1.0
+shader_parameter/fresnel_strength = 0.0
+shader_parameter/emission_strength = 0.0
+shader_parameter/backlight = Color(0, 0, 0, 1)
+shader_parameter/random_color_noise = ExtResource("4_vfobd")
+shader_parameter/fake_specular_texture = ExtResource("3_6kmr3")
+script = ExtResource("1_xxmm5")

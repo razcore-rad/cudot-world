@@ -1,0 +1,61 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Cubot World"
+run/main_scene="res://cudot_world.tscn"
+config/features=PackedStringArray("4.0", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+BackgroundInjector="*res://addons/gdquest.sparkly_bag/autoloads/background_injector/background_injector.gd"
+CudotMaterialSetter="*res://cudot/cudot_material_setter.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdquest.sparkly_bag/plugin.cfg")
+
+[importer_defaults]
+
+scene={
+"_subresources": {},
+"animation/fps": 30,
+"animation/import": true,
+"animation/remove_immutable_tracks": true,
+"animation/trimming": false,
+"gltf/embedded_image_handling": 1,
+"import_script/path": "res://addons/gdquest.sparkly_bag/scene_post_import.gd",
+"meshes/create_shadow_meshes": true,
+"meshes/ensure_tangents": true,
+"meshes/generate_lods": true,
+"meshes/light_baking": 1,
+"meshes/lightmap_texel_size": 0.2,
+"nodes/apply_root_scale": true,
+"nodes/root_name": "Scene Root",
+"nodes/root_scale": 1.0,
+"nodes/root_type": "Node3D",
+"skins/use_named_skins": true
+}
+
+[input]
+
+attack={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(247, 2),"global_position":Vector2(251, 45),"factor":1.0,"button_index":1,"pressed":true,"double_click":false,"script":null)
+]
+}
+
+[rendering]
+
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=4
+anti_aliasing/quality/msaa_2d=3
+anti_aliasing/quality/msaa_3d=3
